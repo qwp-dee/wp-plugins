@@ -1,15 +1,7 @@
 <?php
 
-/**
- * Link
- *
- * @since Post Formats 1.0
- *
- * @package Post Formats
- * @subpackage Formats
- */
+/*Link*/
 
-/** @link http://wp-snippets.com/get-the-first-link-in-post/ */
 function post_formats_get_content_link( $content = false, $echo = false ) {
 
     if ( $content === false ) {
