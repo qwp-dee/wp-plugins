@@ -1,12 +1,7 @@
 <?php
-
 /**
  * Audio
  *
- * @since Post Formats 1.0
- *
- * @package Post Formats
- * @subpackage Formats
  */
 
 function post_formats_audio_content( $content ) {
