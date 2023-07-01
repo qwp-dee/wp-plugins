@@ -2,12 +2,6 @@
 
 /**
  * Quote
- *
- * @since Post Formats 1.0
- * @link http://justintadlock.com/archives/2012/08/27/post-formats-quote
- *
- * @package Post Formats
- * @subpackage Formats
  */
 
 add_filter( 'the_content', 'post_formats_quote_content' );
