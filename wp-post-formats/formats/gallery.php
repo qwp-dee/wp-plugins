@@ -1,22 +1,7 @@
 <?php
 
-/**
- * Gallery
- *
- * @since Post Formats 1.0
- *
- * @package Post Formats
- * @subpackage Formats
- */
+/** Gallery*/
 
-
-/**
- * Prepend the [gallery] shortcode
- * to the content, if it does not
- * already exist
- *
- * @since Post Formats 1.0
- */
 function post_formats_gallery_content( $content ) {
 
 	if ( has_post_format( 'gallery' ) ) {
