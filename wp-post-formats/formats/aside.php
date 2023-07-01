@@ -2,12 +2,6 @@
 
 /**
  * Aside
- *
- * @since Post Formats 1.0
- * @link http://justintadlock.com/archives/2012/09/06/post-formats-aside
- *
- * @package Post Formats
- * @subpackage Formats
  */
 
 add_filter( 'the_content', 'post_formats_aside_to_infinity_and_beyond', 9 ); // run before wpautop
