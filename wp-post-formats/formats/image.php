@@ -1,13 +1,6 @@
 <?php
 
-/**
- * Image
- *
- * @since Post Formats 1.0
- *
- * @package Post Formats
- * @subpackage Formats
- */
+/** Image*/
 
 function post_formats_image_content( $content ) {
 
