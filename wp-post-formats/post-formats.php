@@ -2,9 +2,7 @@
 
 /**
  * Plugin Name: Post Formats
- * Plugin URI: https://github.com/bungeshea/post-formats
- * Author Name: Shea Bunge
- * Author URI: http://bungeshea.com
+ * Author Name: Shukla deepak
  * Description: Adds support for many different post formats. Much thanks to Justin Tadlock. Also works with Alex King's <a href="http://alexking.org/blog/2011/10/25/wordpress-post-formats-admin-ui">Post Formats Admin UI</a>, but it is not required.
  * Version: 1.0
  *
@@ -12,10 +10,7 @@
  * went into this plugin
  *
  * This plugin also supports the Crowd Favourite Post Formats UI plugin
- * @link http://alexking.org/blog/2011/10/25/wordpress-post-formats-admin-ui
  *
- * @package Post Formats
- * @subpackage Main
  */
 
 /***************** Components *****************/
