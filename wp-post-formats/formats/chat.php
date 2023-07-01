@@ -1,14 +1,6 @@
 <?php
 
-/**
- * Chat
- *
- * @since Post Formats 1.0
- * @link http://justintadlock.com/archives/2012/08/21/post-formats-chat
- *
- * @package Post Formats
- * @subpackage Formats
- */
+/**Chat*/
 
 /* Filter the content of chat posts. */
 add_filter( 'the_content', 'post_formats_chat_content' );
@@ -16,24 +8,7 @@ add_filter( 'the_content', 'post_formats_chat_content' );
 /* Auto-add paragraphs to the chat text. */
 add_filter( 'post_formats_chat_text', 'wpautop' );
 
-/**
- * This function filters the post content when viewing a post with the "chat" post format.  It formats the
- * content with structured HTML markup to make it easy for theme developers to style chat posts.  The
- * advantage of this solution is that it allows for more than two speakers (like most solutions).  You can
- * have 100s of speakers in your chat post, each with their own, unique classes for styling.
- *
- * @author David Chandra
- * @link http://www.turtlepod.org
- * @author Justin Tadlock
- * @link http://justintadlock.com
- * @copyright Copyright (c) 2012
- * @license http://www.gnu.org/licenses/old-licenses/gpl-2.0.html
- * @link http://justintadlock.com/archives/2012/08/21/post-formats-chat
- *
- * @global array $_post_format_chat_ids An array of IDs for the chat rows based on the author.
- * @param string $content The content of the post.
- * @return string $chat_output The formatted content of the post.
- */
+
 function post_formats_chat_content( $content ) {
 	global $_post_format_chat_ids;
 
@@ -83,13 +58,7 @@ function post_formats_chat_content( $content ) {
 
 			/* Close the chat row. */
 			$chat_output .= "\n\t\t\t\t" . '</div><!-- .chat-row -->';
-		}
-
-		/**
-		 * If no author is found, assume this is a separate paragraph of text that belongs to the
-		 * previous speaker and label it as such, but let's still create a new row.
-		 */
-		else {
+		}else {
 
 			/* Make sure we have text. */
 			if ( ! empty( $chat_row ) ) {
@@ -115,25 +84,6 @@ function post_formats_chat_content( $content ) {
 	return apply_filters( 'post_formats_chat_content', $chat_output );
 }
 
-/**
- * This function returns an ID based on the provided chat author name.  It keeps these IDs in a global
- * array and makes sure we have a unique set of IDs.  The purpose of this function is to provide an "ID"
- * that will be used in an HTML class for individual chat rows so they can be styled.  So, speaker "John"
- * will always have the same class each time he speaks.  And, speaker "Mary" will have a different class
- * from "John" but will have the same class each time she speaks.
- *
- * @author David Chandra
- * @link http://www.turtlepod.org
- * @author Justin Tadlock
- * @link http://justintadlock.com
- * @copyright Copyright (c) 2012
- * @license http://www.gnu.org/licenses/old-licenses/gpl-2.0.html
- * @link http://justintadlock.com/archives/2012/08/21/post-formats-chat
- *
- * @global array $_post_format_chat_ids An array of IDs for the chat rows based on the author.
- * @param string $chat_author Author of the current chat row.
- * @return int The ID for the chat row based on the author.
- */
 function post_formats_chat_row_id( $chat_author ) {
 	global $_post_format_chat_ids;
 
