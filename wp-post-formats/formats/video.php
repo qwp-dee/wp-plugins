@@ -2,20 +2,9 @@
 
 /**
  * Video
- *
- * @since Post Formats 1.0
- *
- * @package Post Formats
- * @subpackage Formats
  */
 
-/**
- * Prepends the video embed code to the
- * post content, if it does not already
- * exist
- *
- * @since Post Formats 1.0
- */
+
 function post_formats_video_content( $content ) {
 
 	if ( has_post_format( 'video' ) ) {
